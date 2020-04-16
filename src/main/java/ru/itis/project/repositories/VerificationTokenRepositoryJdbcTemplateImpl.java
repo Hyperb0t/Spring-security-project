@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
 import ru.itis.project.models.VerificationToken;
 
@@ -77,4 +78,5 @@ public class VerificationTokenRepositoryJdbcTemplateImpl implements Verification
         return Optional.ofNullable(jdbcTemplate.queryForObject(SQL_SELECT_BY_TOKEN, new Object[]{token},
                 verificationTokenRowMapper));
     }
+
 }

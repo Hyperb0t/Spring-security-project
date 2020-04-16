@@ -61,10 +61,7 @@ public class ApplicationContextConfig {
         return new HikariDataSource(hikariConfig());
     }
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+
 
     @Bean
     public JavaMailSender javaMailSender() {

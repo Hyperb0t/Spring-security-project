@@ -27,7 +27,7 @@ public class UserRepositoryJdbcTemplateImpl implements UserRepository{
     private final static String SQL_SELECT_BY_EMAIL_AND_PASSWORD = "SELECT * FROM public.\"User\" " +
             " WHERE email = ? AND password = ?";
     //language=SQL
-    private final static String SQL_SELECT_BY_EMAIL = "SELECT * FROM public.\"User\" WHERE email = ?";
+    private final static String SQL_SELECT_BY_EMAIL = "SELECT * FROM public.\"User\" WHERE email = ? LIMIT 1";
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
